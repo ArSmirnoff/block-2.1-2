@@ -1,15 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        int x = 100; //начальный счет
-        int y = 1100; //сумма пополнения
-        int f = y / 100; //бонус
-        int z = y + x; // итоговая сумма
+        int balance = 200; //начальный счет
+        int amountDeposit = 1100; //сумма пополнения
+        int bonus; //бонус
 
-        if (y > 1000) {
-            System.out.println("На вашем счету:" + (z + f) + "руб");
+        if (amountDeposit > 1000) {
+            bonus= amountDeposit / 100;
+        } else  {
+            bonus= 0;
         }
-        if (y < 1000) {
-            System.out.println("На вашем счету:" + z + "руб");
-        }
+        int z = amountDeposit + balance + bonus;
+        System.out.println("На вашем счету:" + z + "руб");
     }
 }
